@@ -1,0 +1,39 @@
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+//  This is a simple calculator written in C
+//  I created this in order to demonstrate my 
+//  ability to code a simple project using C.
+
+#include<stdio.h>
+#include<math.h>
+
+int main(void)
+{
+    float x,y;
+
+    //  prompt user for 2 integers
+    printf("Enter an integer:\n");
+    scanf("%f", &x);
+    printf("Enter another integer:\n");
+    scanf("%f", &y);
+
+    //  prompt user for operation to perform
+    char operation;
+    printf("Enter an operation to perform (e.g., + - * /):\n");
+    scanf("%c", &operation);
+    
+    //  test cases depending on operation chosen
+    if (&operation=="+") {printf("x + y = %f\n", x + y);}
+    else if (&operation=="-") {printf("x - y = %f\n", x - y);}
+    else if (&operation=="*") {printf("x * y = %f\n", x * y);} 
+    else if (&operation=="/") {printf("x / y = %f\n", x / y);} 
+    //  in the event a different character is chosen than the ones suggested
+    else {printf("Sorry, you did not choose one of the 5 operations.");}
+    return 0;
+}
