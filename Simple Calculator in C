@@ -15,25 +15,39 @@ Write your code in this editor and press "Run" button to compile and execute it.
 
 int main(void)
 {
-    float x,y;
+    int x,y;
 
     //  prompt user for 2 integers
     printf("Enter an integer:\n");
-    scanf("%f", &x);
+    scanf("%d", &x);
     printf("Enter another integer:\n");
-    scanf("%f", &y);
+    scanf("%d", &y);
 
     //  prompt user for operation to perform
     char operation;
-    printf("Enter an operation to perform (e.g., + - * /):\n");
-    scanf("%c", &operation);
+    printf("Enter an operation to perform (e.g., + - * / %):\n");
+    scanf("%s", &operation);
     
     //  test cases depending on operation chosen
-    if (&operation=="+") {printf("x + y = %f\n", x + y);}
-    else if (&operation=="-") {printf("x - y = %f\n", x - y);}
-    else if (&operation=="*") {printf("x * y = %f\n", x * y);} 
-    else if (&operation=="/") {printf("x / y = %f\n", x / y);} 
+    if (strncmp(&operation, "+") == 0) {
+        printf("x + y = %d\n", x + y);
+        }
+    else if (strncmp(&operation, "-") == 0) {
+        printf("x - y = %d\n", x - y);
+        }
+    else if (strncmp(&operation, "*") == 0) {
+        printf("x * y = %d\n", x * y);
+        } 
+    else if (strncmp(&operation, "/") == 0) {
+        printf("x / y = %d\n", x / y);
+        } 
+    else if (strncmp(&operation, "%") == 0) {
+        printf("x % y = %d\n", x % y);
+        } 
+
     //  in the event a different character is chosen than the ones suggested
-    else {printf("Sorry, you did not choose one of the 5 operations.");}
+    else {
+        printf("Sorry, you did not choose one of the 5 operations.");
+          }
     return 0;
 }
