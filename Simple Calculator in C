@@ -30,16 +30,16 @@ int main(void)
     scanf("%s", &operation);
     
     //  test cases depending on operation chosen
-    if (strncmp(&operation, "+") == 0) {
+    if (strncmp(&operation, "+",1) == 0) {
         printf("x + y = %d\n", x + y);
         }
-    else if (strncmp(&operation, "-") == 0) {
+    else if (strncmp(&operation, "-",1) == 0) {
         printf("x - y = %d\n", x - y);
         }
-    else if (strncmp(&operation, "*") == 0) {
+    else if (strncmp(&operation, "*",1) == 0) {
         printf("x * y = %d\n", x * y);
         } 
-    else if (strncmp(&operation, "/") == 0) {
+    else if (strncmp(&operation, "/",1) == 0) {
         printf("x / y = %d\n", x / y);
         } 
 
