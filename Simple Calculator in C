@@ -11,6 +11,7 @@ Write your code in this editor and press "Run" button to compile and execute it.
 //  ability to code a simple project using C.
 
 #include<stdio.h>
+#include<string.h>
 #include<math.h>
 
 int main(void)
@@ -25,7 +26,7 @@ int main(void)
 
     //  prompt user for operation to perform
     char operation;
-    printf("Enter an operation to perform (e.g., + - * / %):\n");
+    printf("Enter an operation to perform (e.g., + - * /):\n");
     scanf("%s", &operation);
     
     //  test cases depending on operation chosen
@@ -40,9 +41,6 @@ int main(void)
         } 
     else if (strncmp(&operation, "/") == 0) {
         printf("x / y = %d\n", x / y);
-        } 
-    else if (strncmp(&operation, "%") == 0) {
-        printf("x % y = %d\n", x % y);
         } 
 
     //  in the event a different character is chosen than the ones suggested
